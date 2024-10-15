@@ -46,3 +46,28 @@ A PLOT TO ADD
 ```bash
 ollama --version
 ```
+
+You should see the installed version of Ollama, confirming a successful installation.
+
+## Choose and Download an Open-Source Language Model
+---
+Select an open-source language model compatible with Ollama. ***LLaMA 3.2-1B*** models are a popular choice. Ensure you have the rights and licenses to use them.
+
+For this project, we'll use ***LLaMA 3.2-1B*** as an example.
+- ***Download the Model***-
+1. Visit the official [LLaMA 2 repository](https://github.com/meta-llama/llama) or authorized sources to obtain the model weights.
+2. Follow the instructions provided to download the model. This might involve agreeing to licensing terms and using specific download commands or tools.
+3. Once downloaded, place the model files in a directory accessible to Ollama, e.g., ```C:\ollama\models\llama3.2-1B```.
+
+***Note***. You can check the available models in the bash using command:
+```bash
+llama model list --show-all
+```
+
+***Note***. To download the desired model, use the command:
+```bash
+llama model download --source meta --model-id MODEL_ID
+```
+In this case, the following model is used:
+```bash
+llama model download --source meta --model-id Llama3.2-1B
